@@ -1,0 +1,31 @@
+/* styles.scss */
+ion-content {
+  --background: linear-gradient(#edebf3f3, #f4f3f6);
+}
+
+.category-card {
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(245, 237, 237, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+ion-card-header {
+  --background: linear-gradient(#c1affe, #6952ff);
+  color: #ffffff;
+}
+
+ion-card-title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #ecd20b;
+}
+
+ion-card-content {
+  padding: 15px;
+}

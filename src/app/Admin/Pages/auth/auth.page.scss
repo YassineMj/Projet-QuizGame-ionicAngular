@@ -1,0 +1,70 @@
+
+ion-content {
+    //--background:#c9cdff;
+    --background: linear-gradient(to right, #c4c8fe, rgb(210, 229, 255));
+    width: 100%;
+  }
+   .all{
+    margin-top: 25%;
+   }
+  
+  
+    .login-grid {
+      width: 100%;
+      padding: 20px; /* Add padding for better spacing */
+     
+    }
+  
+    .login-card {
+      
+      border-radius: 10px;
+      position: fixed;
+      padding: 20px;
+      position: relative; 
+      z-index: 1;
+    }
+    
+    ion-list {
+      --ion-background-color: transparent;
+    }
+    
+    ion-item {
+      --ion-background-color: #fff;
+      --ion-border-color: #ccc;
+    }
+    
+    ion-input {
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+    
+   
+    /* Responsive Styles */
+    @media (max-width: 800px) {
+      .login-title {
+        font-size: 24px;
+      }
+    }
+    /* login.page.scss */
+  
+  ion-card.login-card {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .login-title {
+    color: #726098;
+    text-align: center;
+    font-weight: bold;
+  
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    --background: #7a84f6;
+    border-radius: 5px;
+    font-size: large;
+    
+  }
+  

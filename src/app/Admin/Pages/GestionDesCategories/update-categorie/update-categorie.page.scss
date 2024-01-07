@@ -1,0 +1,42 @@
+/* questions.page.scss */
+
+ion-content {
+  //--background:#c9cdff;
+  --background: linear-gradient(to right, #c4c8fe, rgb(210, 229, 255));
+}
+
+ion-card {
+    margin: 10px;
+  }
+  
+  ion-item {
+    border: 2px solid transparent;
+    border-radius: 8px; /* Ajoutez une bordure arrondie */
+    margin-bottom: 8px; /* Ajoutez une marge en bas entre les réponses */
+  }
+  
+  .correct-answer {
+    border-color: #4caf50;
+  }
+  
+  .correct-answer ion-label {
+    font-weight: bold; /* Ajoutez un style de police plus épaisse à la réponse correcte */
+  }
+  
+  .incorrect-answer {
+    border-color: #f44336;
+  }
+  
+  ion-label {
+    font-size: 16px; /* Taille de police pour les réponses */
+  }
+  
+  ion-button {
+    width: 100%;
+    font-size: 14px; /* Taille de police pour les boutons */
+    --background: #ffffff; /* Couleur de fond pour les boutons */
+    --ion-color-base: #333333; /* Couleur du texte pour les boutons */
+  }
+  
+  /* Ajoutez d'autres styles au besoin */
+  

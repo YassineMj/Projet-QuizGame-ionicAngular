@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/auth"></ion-back-button>
+      <ion-title>Gestion des categories</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-list [inset]="true" *ngFor="let c of _serviceCategorie.categories">
+    <ion-item-sliding >
+      <ion-item [button]="true" (click)="detailsCategorie(c.$key)">
+        <ion-icon color="primary" slot="start" name="filter-circle-outline" size="large"></ion-icon>
+        <ion-label>
+                <h3>{{c.data.nomCategorie}}</h3>
+                <p>{{c.data.descriptionCategorie}}</p>
+        </ion-label>
+        <h6 slot="end">{{c.data.questions.length}}</h6>
+
+      </ion-item>
+      <ion-item-options side="end" style="width: 15%;" >
+        <ion-item-option style="width: 100%;" color="danger"(click)="deleteItem(c.$key)">
+          <ion-icon name="trash"  size="large"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+
+</ion-content>
+
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="openForm()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+

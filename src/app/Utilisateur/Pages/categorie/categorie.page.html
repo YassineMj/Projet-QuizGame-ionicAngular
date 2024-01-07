@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Categories de Jeux</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let category of _serviceCategorie.categories" >
+        <ion-card class="category-card" (click)="navigateToQuestions(category.$key)">
+          <ion-card-header>
+            <ion-card-title>{{ category.data.nomCategorie }}</ion-card-title>
+            <ion-card-subtitle>{{ category.data.questions.length }} Questions</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ category.data.descriptionCategorie }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

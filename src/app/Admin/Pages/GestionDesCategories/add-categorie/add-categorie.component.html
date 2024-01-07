@@ -1,0 +1,32 @@
+<ion-content class="ion-padding">
+  <ion-button shape="round" size="large" expand="block" class="close-button" (click)="dismissModal()">
+    Fermer
+  </ion-button>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col class="all" size-md="8" size-lg="6">
+        <ion-card class="login-card">
+          <ion-card-header>
+            <ion-card-title class="login-title">Ajouter Categorie</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item lines="none">
+                <ion-icon name="duplicate" slot="start"></ion-icon>
+                <ion-input type="text" placeholder="Categorie" [(ngModel)]="newCategorie.nomCategorie" required></ion-input>
+              </ion-item><br><hr>
+              <ion-item lines="none">
+                <ion-textarea  style="height: 150px; min-height: 150px;" [(ngModel)]="newCategorie.descriptionCategorie" class="custom-textarea" placeholder="Description de Categorie"></ion-textarea>
+              </ion-item>
+            </ion-list>
+            <ion-button shape="round" size="large" expand="block" class="login-button" (click)="submitForm()">
+              <ion-icon name="add-sharp" slot="start"></ion-icon>
+              Ajouter
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

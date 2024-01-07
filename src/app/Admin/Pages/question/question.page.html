@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item style="margin-top: 3%;">
+        <ion-icon name="menu" slot="start" size="large"></ion-icon> 
+        <ion-label style="font-weight: bold; font-size: 20px;" > Catégorie</ion-label>
+        <ion-select [(ngModel)]="selectedCategory" placeholder="Sélectionnez une catégorie">
+          <ion-select-option *ngFor="let cat of _serviceCategorieUt.categories" [value]="cat.$key">{{ cat.data.nomCategorie }}</ion-select-option>
+        </ion-select>
+      </ion-item><br>
+
+      <ion-item>
+        <ion-input placeholder="Saisissez le texte de la question" [(ngModel)]="question.texteQuestion"  style=" font-family: 'Gill Sans', sans-serif; font-size: 19px;"></ion-input>
+      </ion-item><br><hr>
+
+      <ion-item *ngFor="let reponse of reponses; let i = index">
+        <ion-label position="stacked">Réponse {{ i + 1 }}</ion-label>
+        <ion-input placeholder="Saisissez la réponse" [(ngModel)]="reponses[i].texteReponse"  style=" font-family: 'Gill Sans', sans-serif; font-size: 19px;"><ion-icon name="arrow-forward-sharp" slot="start"></ion-icon></ion-input>
+        <ion-checkbox [(ngModel)]="reponses[i].estCorrecte"></ion-checkbox>
+      </ion-item>
+      <ion-button shape="round" class="login-button" (click)="submitForm()">
+        <ion-icon name="add-sharp" slot="start"></ion-icon>
+        Ajouter
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

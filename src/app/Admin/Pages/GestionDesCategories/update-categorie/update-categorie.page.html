@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+      <ion-title>Liste des questions de la categorie {{nomCategorie}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let question of questions; let i = index" (click)="showAnswers(question)">
+    <ion-card-header>
+      <ion-card-title>{{ question.texteQuestion }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="selectedQuestion === question">
+      <ion-list>
+        <ion-item *ngFor="let answer of question.reponses">
+          <ion-label>
+            <h3>{{ answer.texteReponse }}</h3>
+          </ion-label>
+          <p slot="end" *ngIf="answer.estCorrecte" style="color: green; border: 1px solid green; padding: 4px; width: 60px; text-align: center; border-radius: 20px"> Vrai </p>
+          <p slot="end" *ngIf="!answer.estCorrecte" style="color: red; border: 1px solid red; padding: 4px; width: 60px; text-align: center; border-radius: 20px"> Faux </p>
+        </ion-item>
+        <ion-button (click)="deleteQuestion(i)" color="danger" fill="clear">
+          <ion-icon name="trash"></ion-icon>
+          Supprimer
+        </ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

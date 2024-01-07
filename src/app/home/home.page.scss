@@ -1,0 +1,41 @@
+ion-content {
+  .background-image {
+    background-image: url('../../assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .categorie-button {
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+    width: 30%;
+    height: 44px;
+    font-size: 2vw; /* Utilisez vw pour rendre la taille de la police réactive à la largeur de l'écran */
+    --background:  #fffcae;
+    --color: #000000;
+    font-weight: bold;
+
+    @media screen and (max-width: 600px) {
+      font-size: 4vw; /* Ajustez la taille du texte pour les écrans plus petits */
+    }
+  }
+
+  .admin-button {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    width: 30%;
+    height: 44px;
+    border-radius: 20%;
+    font-size: 2vw; /* Utilisez vw pour rendre la taille de la police réactive à la largeur de l'écran */
+    --border-color: #fffee0;
+    --color: #fffed4;
+    font-weight: bold;
+
+    @media screen and (max-width: 600px) {
+      font-size: 4vw; /* Ajustez la taille du texte pour les écrans plus petits */
+    }
+  }
+}
